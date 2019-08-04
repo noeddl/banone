@@ -1,0 +1,143 @@
+Blödkolben:
+    base: Lötkolben
+    extra: blöd
+    question: Was ist heiß, dumm und verschweißt Dinge?
+    answer: Ein Blödkolben.
+
+Fahnane:
+    base: Banane
+    extra: Fahne
+    question: Was ist gelb, krumm und flattert im Wind?
+    answer: Eine Fahnane.
+
+Faulwurf:
+    base: Maulwurf
+    extra: faul
+    question: Was ist schwarz, blind und weigert sich zu arbeiten?
+    answer: Ein Faulwurf.
+
+Fluchtsalat:
+    base: Fruchtsalat
+    extra: Flucht
+    question: Was ist bunt und läuft schnell davon?
+    answer: Ein Fluchtsalat.
+
+Frommbeere:
+    base: Brombeere
+    extra: fromm
+    question: Was ist violett und sitzt in der Kirche ganz vorne?
+    answer: Eine Frommbeere.
+
+Kaminchen:
+    base: Kaninchen
+    extra: Kamin
+    question: Was ist niedlich, hoppelt über die Wiese und qualmt?
+    answer: Ein Kaminchen.
+
+Klebra:
+    base: Zebra
+    extra: kleben
+    question: Was ist schwarz-weiß gestreift und kommt nicht vom Fleck?
+    answer: Ein Klebra.
+
+Klomate:
+    base: Tomate
+    extra: Klo
+    question: Was ist rot und sitzt auf dem WC?
+    answer: Eine Klomate.
+
+Knastanie:
+    base: Kastanie
+    extra: Knast
+    question: Was ist braun und sitzt hinter Gittern?
+    answer: Eine Knastanie.
+
+Lärmflasche:
+    base: Wärmflasche
+    extra: Lärm
+    question: Was ist laut und sorgt dafür, dass man nicht friert?
+    answer: Eine Lärmflasche.
+
+Pudelauflauf:
+    base: Nudelauflauf
+    extra: Pudel
+    question: Was ist mit Käse überbacken und bellt?
+    answer: Ein Pudelauflauf.
+
+Schlaubeere:
+    base: Blaubeere
+    extra: schlau
+    question: Was ist blau und weiß sehr viel?
+    answer: Eine Schlaubeere.
+
+Schlimmbeere:
+    base: Himbeere
+    extra: schlimm
+    question: Was ist rot, fruchtig und macht nur Ärger?
+    answer: Eine Schlimmbeere.
+
+Schmutzhelm:
+    base: Schutzhelm
+    extra: Schmutz
+    question: Was ist dreckig und wird von Fahrradfahrern getragen?
+    answer: Ein Schmutzhelm.
+
+Schokodil:
+    base: Krokodil
+    extra: schoko
+    question: Was ist braun, gefährlich und schwimmt im Wasser?
+    answer: Ein Schokodil.
+
+Schwanane:
+    base: Banane
+    extra: Schwan
+    question: Was ist gelb, krumm und schwimmt auf dem See?
+    answer: Eine Schwanane.
+
+Schwebra:
+    base: Zebra
+    extra: schweben
+    question: Was ist schwarz-weiß gestreift und berührt nicht den Boden?
+    answer: Ein Schwebra.
+
+Schwinguin:
+    base: Pinguin
+    extra: schwingen
+    question: Was ist schwarz-weiß und sitzt auf der Schaukel?
+    answer: Ein Schwinguin.
+
+Spannanas:
+    base: Ananas
+    extra: spannen
+    question: Was ist gelb und schaut durchs Schlüsselloch?
+    answer: Eine Spannanas.
+
+Springuin:
+    base: Pinguin
+    extra: springen
+    question: Was ist schwarz-weiß und hüpft herum?
+    answer: Ein Springuin.
+
+Telefant:
+    base: Elefant
+    extra: tele
+    question: Was ist grau, groß und kann telefonieren?
+    answer: Ein Telefant.
+
+Vandaline:
+    base: Mandarine
+    extra: Vandale
+    question: Was ist orange, rund und versteckt sich vor der Polizei?
+    answer: Eine Vandaline.
+
+Wertbeere:
+    base: Erdbeere
+    extra: Wert
+    question: Was ist rot, fruchtig und sehr kostbar?
+    answer: Eine Wertbeere.
+
+Zappelsine:
+    base: Apfelsine
+    extra: zappeln
+    question: Was ist orange, rund und kann keine Minute ruhig sitzen?
+    answer: Eine Zappelsine.

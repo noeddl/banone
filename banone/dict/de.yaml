@@ -1,0 +1,229 @@
+Ananas:
+    pos: NN
+    determiner: eine
+    color: gelb
+
+Apfelsine:
+    pos: NN
+    determiner: eine
+    color: orange
+    property: rund
+
+Banane:
+    pos: NN
+    determiner: eine
+    color: gelb
+    property: krumm
+
+Blaubeere:
+    pos: NN
+    determiner: eine
+    color: blau
+
+Brombeere:
+    pos: NN
+    determiner: eine
+    color: violett
+
+Elefant:
+    pos: NN
+    determiner: ein
+    color: grau
+    property: groß
+
+Erdbeere:
+    pos: NN
+    determiner: eine
+    color: rot
+    property: fruchtig
+
+Fahne:
+    pos: NN
+    action: flattert im Wind
+
+Flucht:
+    pos: NN
+    action: läuft schnell davon
+
+Fruchtsalat:
+    pos: NN
+    determiner: ein
+    color: bunt
+
+Himbeere:
+    pos: NN
+    determiner: eine
+    color: rot
+    property: fruchtig
+
+Kamin:
+    pos: NN
+    determiner: ein
+    action: qualmt
+
+Kaninchen:
+    pos: NN
+    determiner: ein
+    property: niedlich
+    action: hoppelt über die Wiese
+
+Kastanie:
+    pos: NN
+    determiner: eine
+    color: braun
+
+Klo:
+    pos: NN
+    determiner: ein
+    action: sitzt auf dem WC
+
+Knast:
+    pos: NN
+    determiner: ein
+    action: sitzt hinter Gittern
+
+Krokodil:
+    pos: NN
+    determiner: ein
+    property: gefährlich
+    action: schwimmt im Wasser
+
+Lärm:
+    pos: NN
+    determiner: ein
+    property: laut
+
+Lötkolben:
+    pos: NN
+    determiner: ein
+    property: heiß
+    action: verschweißt Dinge
+
+Mandarine:
+    pos: NN
+    determiner: eine
+    color: orange
+    property: rund
+
+Maulwurf:
+    pos: NN
+    determiner: ein
+    color: schwarz
+    property: blind
+
+Nudelauflauf:
+    pos: NN
+    determiner: ein
+    property: mit Käse überbacken
+
+Pinguin:
+    pos: NN
+    determiner: ein
+    color: schwarz-weiß
+
+Pudel:
+    pos: NN
+    determiner: ein
+    action: bellt
+
+Randale:
+    pos: NN
+    determiner: eine
+    action: macht ordentlich Krawall
+
+Schmutz:
+    pos: NN
+    determiner: ein
+    property: dreckig
+
+Schutzhelm:
+    pos: NN
+    determiner: ein
+    action: wird von Fahrradfahrern getragen
+
+Schwan:
+    pos: NN
+    determiner: ein
+    action: schwimmt auf dem See
+
+Tannzapfen:
+    pos: NN
+    determiner: ein
+    color: braun
+
+Tomate:
+    pos: NN
+    determiner: eine
+    color: rot
+
+Vandale:
+    pos: NN
+    determiner: ein
+    action: versteckt sich vor der Polizei
+
+Wert:
+    pos: NN
+    determiner: ein
+    property: sehr kostbar
+
+Wärmflasche:
+    pos: NN
+    determiner: eine
+    action: sorgt dafür, dass man nicht friert
+
+Zebra:
+    pos: NN
+    determiner: ein
+    color: schwarz-weiß gestreift
+
+blöd:
+    pos: ADJ
+    property: dumm
+
+faul:
+    pos: ADJ
+    action: weigert sich zu arbeiten
+
+fromm:
+    pos: ADJ
+    action: sitzt in der Kirche ganz vorne
+
+kleben:
+    pos: VB
+    action: kommt nicht vom Fleck
+
+schlau:
+    pos: ADJ
+    property: weiß sehr viel
+
+schlimm:
+    pos: ADJ
+    property: macht nur Ärger
+
+schoko:
+    pos: PRE
+    color: braun
+
+schweben:
+    pos: VB
+    action: berührt nicht den Boden
+
+schwingen:
+    pos: VB
+    action: sitzt auf der Schaukel
+
+spannen:
+    pos: VB
+    action: schaut durchs Schlüsselloch
+
+springen:
+    pos: VB
+    action: hüpft herum
+
+tele:
+    pos: PRE
+    action: kann telefonieren
+
+zappeln:
+    pos: VB
+    action: kann keine Minute ruhig sitzen
