@@ -19,15 +19,15 @@ class Dictionary:
             for orth, lemma_dict in yaml.safe_load(file).items():
                 self.entries[orth] = Lemma(orth, lemma_dict)
 
-    def __iter__(self) -> Iterator[str]:
+    def __iter__(self) -> Iterator[Lemma]:
         """Iterate over dictionary entries."""
-        for orth in self.entries:
-            yield orth
+        for lemma in self.entries.values():
+            yield lemma
 
     def lookup(self, s: str) -> Optional[Lemma]:
         """Look up a word in the dictionary."""
         return self.entries.get(s)
 
-    def iter_nouns(self) -> Iterator[str]:
+    def iter_nouns(self) -> Iterator[Lemma]:
         """Iterate over the nouns in the dictionary."""
-        return (n for n, lemma in self.entries.items() if lemma.pos == "NN")
+        return (lemma for lemma in self if lemma.pos == "NN")

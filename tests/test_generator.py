@@ -27,10 +27,13 @@ class TestGenerator:
         assert fxt_generator.generate_answer(base, compound) == answer
 
     @pytest.mark.parametrize(
-        ("base", "extra", "question", "answer"),
+        ("str1", "str2", "question", "answer"),
         load_test_data(["base", "extra", "question", "answer"]),
     )
-    def test_generate_riddle(self, extra, base, question, answer, fxt_generator):
+    def test_generate_riddle(self, str1, str2, question, answer, fxt_generator):
+        base = fxt_generator.dict.lookup(str1)
+        extra = fxt_generator.dict.lookup(str2)
+
         assert fxt_generator.generate_riddle(base, extra) == str.format(
             "{}\n{}", question, answer
         )

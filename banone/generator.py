@@ -48,18 +48,12 @@ class Generator:
                 return a
         return None
 
-    def generate_riddle(self, s1: str, s2: str) -> Optional[str]:
+    def generate_riddle(self, base: Lemma, extra: Lemma) -> Optional[str]:
         """Generate a riddle with a question and an answer based on `s1` and `s2`."""
-        base = self.dict.lookup(s1)
-        extra = self.dict.lookup(s2)
-
-        if base is None or extra is None:
-            return None
-
         compound = base.merge(extra)
         if compound:
             q = self.generate_question(base, extra)
-            a = self.generate_answer(s1, compound)
+            a = self.generate_answer(base.orth, compound)
             return str.format("{}\n{}", q, a)
 
         return None
@@ -71,7 +65,7 @@ class Generator:
         """
         for extra in self.dict:
             for base in self.dict.iter_nouns():
-                if base == extra or len(extra) > len(base):
+                if base.orth == extra.orth:
                     continue
                 riddle = self.generate_riddle(base, extra)
                 if riddle:
