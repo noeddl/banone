@@ -17,24 +17,29 @@ class Generator:
 
     def generate_question(self, base: Lemma, extra: Lemma) -> str:
         """Generate the question for asking for the result of merging two lemmas."""
-        properties: List[Optional[str]] = []
+        is_properties: List[Optional[str]] = []
 
         # If a color is specified, it should be mentioned first in the question.
         color = extra.color or base.color
         if color:
-            properties.append(color)
+            is_properties.append(color)
 
         # Add additional properties.
-        properties.append(base.property)
-        properties.append(extra.property)
-        properties.append(base.action)
-        properties.append(extra.action)
+        is_properties.append(base.property)
+        is_properties.append(extra.property)
+        props = [prop for prop in is_properties if prop is not None]
 
-        props = [prop for prop in properties if prop is not None]
+        # Add actions.
+        actions = [prop for prop in [base.action, extra.action] if prop is not None]
 
-        predicates = ", ".join(props[:-1])
+        all_props = props + actions
+        predicates = ", ".join(all_props[:-1])
 
-        q = "Was ist {} und {}?".format(predicates, props[-1])
+        # Add copula verb if there are properties that are adjectives.
+        if props:
+            predicates = "ist {}".format(predicates)
+
+        q = "Was {} und {}?".format(predicates, all_props[-1])
 
         return q
 

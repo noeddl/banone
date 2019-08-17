@@ -107,6 +107,12 @@ Krokodil:
     property: gefährlich
     action: schwimmt im Wasser
 
+Laubfrosch:
+    phon: "'laUp-fROS"
+    pos: NN
+    determiner: ein
+    action: hüpft durch den Wald
+
 Lärm:
     phon: "'lE6m"
     pos: NN
@@ -158,6 +164,12 @@ Randale:
     determiner: eine
     action: macht ordentlich Krawall
 
+Raub:
+    phon: "'RaUp"
+    pos: NN
+    determiner: ein
+    action: trägt eine Maske
+
 Schmutz:
     phon: "'SmUts"
     pos: NN
@@ -187,6 +199,12 @@ Tomate:
     pos: NN
     determiner: eine
     color: rot
+
+Uhu:
+    phon: "'u-hu"
+    pos: NN
+    determiner: ein
+    action: sitzt auf einem Baum
 
 Vandale:
     phon: "van-'da:-l@"
@@ -227,6 +245,11 @@ fromm:
     pos: ADJ
     action: sitzt in der Kirche ganz vorne
 
+huhu:
+    phon: "'hu-hu"
+    pos: INT
+    action: winkt
+
 kleben:
     phon: "'kle:-b@n"
     pos: VB
@@ -235,12 +258,12 @@ kleben:
 schlau:
     phon: "'SlaU"
     pos: ADJ
-    property: weiß sehr viel
+    action: weiß sehr viel
 
 schlimm:
     phon: "'SlIm"
     pos: ADJ
-    property: macht nur Ärger
+    action: macht nur Ärger
 
 schoko:
     phon: "'So:-ko"

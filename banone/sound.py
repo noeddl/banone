@@ -251,6 +251,10 @@ class SoundSequence:
             if other.index == len(other):
                 break
 
+        # Uhu + huhu = Huhu
+        if self.index == len(self):
+            return other.orth.capitalize()
+
         sound = self.sounds[self.index]
         index = sound.start_char
         s = other.orth + self.orth[index:]

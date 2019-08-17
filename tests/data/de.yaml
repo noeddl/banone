@@ -28,6 +28,12 @@ Frommbeere:
     question: Was ist violett und sitzt in der Kirche ganz vorne?
     answer: Eine Frommbeere.
 
+Huhu:
+    base: Uhu
+    extra: huhu
+    question: Was sitzt auf einem Baum und winkt?
+    answer: Ein Huhu.
+
 Kaminchen:
     base: Kaninchen
     extra: Kamin
@@ -63,6 +69,12 @@ Pudelauflauf:
     extra: Pudel
     question: Was ist mit Käse überbacken und bellt?
     answer: Ein Pudelauflauf.
+
+Raubfrosch:
+    base: Laubfrosch
+    extra: Raub
+    question: Was hüpft durch den Wald und trägt eine Maske?
+    answer: Ein Raubfrosch.
 
 Schlaubeere:
     base: Blaubeere
