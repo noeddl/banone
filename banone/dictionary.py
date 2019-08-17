@@ -1,4 +1,5 @@
 """Module providing the Dictionary class."""
+from collections import Counter
 from pathlib import Path
 
 import yaml
@@ -31,3 +32,21 @@ class Dictionary:
     def iter_nouns(self) -> Iterator[Lemma]:
         """Iterate over the nouns in the dictionary."""
         return (lemma for lemma in self if lemma.pos == "NN")
+
+    def show_stats(self) -> None:
+        """Print statistics about the words currently in the dictionary."""
+        pos_counter: Counter = Counter()
+
+        for lemma in self:
+            pos_counter.update([lemma.pos])
+
+        print("========================")
+        print("Dictionary stats")
+        print("------------------------")
+
+        for pos, count in pos_counter.most_common():
+            print("{}:\t{:>10}".format(pos, count))
+
+        print("------------------------")
+        print("Total:\t{:>10}".format(sum(pos_counter.values())))
+        print("========================")

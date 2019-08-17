@@ -68,6 +68,7 @@ class Generator:
 
         This is mainly meant to be used for debugging.
         """
+        riddle_counter = 0
         for extra in self.dict:
             for base in self.dict.iter_nouns():
                 if base.orth == extra.orth:
@@ -75,3 +76,6 @@ class Generator:
                 riddle = self.generate_riddle(base, extra)
                 if riddle:
                     print(riddle + "\n")
+                    riddle_counter += 1
+
+        print("{} riddles were generated.\n".format(riddle_counter))

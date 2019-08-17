@@ -9,3 +9,5 @@ def main() -> None:
     dict_path = Path(__file__).resolve().parent.joinpath("dict/de.yaml")
     gen = Generator(dict_path)
     gen.generate_all()
+
+    gen.dict.show_stats()
