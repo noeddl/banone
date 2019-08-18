@@ -35,7 +35,7 @@ class Generator:
         all_props = props + actions
         predicates = ", ".join(all_props[:-1])
 
-        # Add copula verb if there are properties that are adjectives.
+        # Add a copula verb if there are properties that are adjectives.
         if props:
             predicates = "ist {}".format(predicates)
 
@@ -43,31 +43,26 @@ class Generator:
 
         return q
 
-    def generate_answer(self, base: str, compound: str) -> Optional[str]:
+    def generate_answer(self, base: Lemma, compound: Lemma) -> Optional[str]:
         """Generate an answer containing `compound` and the determiner of `base`."""
-        e = self.dict.lookup(base)
-        if e:
-            det = e.determiner
-            if det:
-                a = str.format("{} {}.", det.capitalize(), compound)
-                return a
+        det = base.determiner
+        if det:
+            a = str.format("{} {}.", det.capitalize(), compound)
+            return a
         return None
 
     def generate_riddle(self, base: Lemma, extra: Lemma) -> Optional[str]:
-        """Generate a riddle with a question and an answer based on `s1` and `s2`."""
+        """Generate a joke riddle using the lemmas `base` and `extra`."""
         compound = base.merge(extra)
         if compound:
             q = self.generate_question(base, extra)
-            a = self.generate_answer(base.orth, compound)
+            a = self.generate_answer(base, compound)
             return str.format("{}\n{}", q, a)
 
         return None
 
     def generate_all(self) -> None:
-        """Generate all possible riddles based on the current dictionary.
-
-        This is mainly meant to be used for debugging.
-        """
+        """Generate all possible riddles based on the current dictionary."""
         riddle_counter = 0
         for extra in self.dict:
             for base in self.dict.iter_nouns():

@@ -6,7 +6,6 @@ from typing import List
 from typing import NamedTuple
 from typing import Optional
 
-re_vowels = re.compile("^[aeiouy29@6]", re.I)
 re_full_vowels = re.compile("^[aeiouy29]", re.I)
 
 
@@ -21,12 +20,6 @@ class Sound(NamedTuple):
     def __str__(self) -> str:
         """Return the string representation of the sound."""
         return self.phone
-
-    def is_vowel(self) -> bool:
-        """Return `True` if the sound is a vowel including schwa and vocalic r."""
-        if re_vowels.match(self.phone):
-            return True
-        return False
 
     def is_full_vowel(self) -> bool:
         """Return `True` if the sound is a full vowel."""
@@ -48,6 +41,7 @@ class Sound(NamedTuple):
         ):
             return 1
 
+        # Allow for some additional matches that give a larger distance.
         if (
             set([p1, p2]) == set(["m", "n"])
             or set([p1, p2]) == set(["l", "R"])
@@ -55,6 +49,7 @@ class Sound(NamedTuple):
         ):
             return 2
 
+        # The two sounds cannot be matched at all.
         return 100
 
 
@@ -132,7 +127,7 @@ class SoundSequence:
         self.index = 0
 
     def __len__(self) -> int:
-        """Return number of sounds in this sequence."""
+        """Return number of sounds in the sequence."""
         return len(self.sounds)
 
     def __iter__(self) -> Iterator:
@@ -140,7 +135,7 @@ class SoundSequence:
         return self
 
     def __next__(self) -> Sound:
-        """Return next sound of this sequence."""
+        """Return next sound of the sequence."""
         if self.index < len(self):
             sound = self.sounds[self.index]
             self.index += 1
@@ -149,15 +144,14 @@ class SoundSequence:
 
     def _parse(self) -> List[Sound]:
         """Create of mapping of sounds to characters."""
-        w = self.phon
-        v = self.orth.lower()
+        orth = self.orth.lower()
         index = 0
 
         syllable = 1
         stressed = False
         sounds = []
 
-        for m in self.re_sounds.finditer(w):
+        for m in self.re_sounds.finditer(self.phon):
             s = m.group()
 
             # Keep track of stress.
@@ -178,10 +172,10 @@ class SoundSequence:
                 stressed = False
 
             for graph in self.phone_graph_map.get(s, [s]):
-                if v.startswith(graph):
+                if orth.startswith(graph):
                     sounds.append(sound)
                     step = len(graph)
-                    v = v[step:]
+                    orth = orth[step:]
                     index += step
 
         return sounds
@@ -193,9 +187,12 @@ class SoundSequence:
         of a syllable is a cluster of consonants until the first vowel.
 
         Examples:
-        The first syllable in "Banane" is "Ba", its onset is "B".
-        The onset of "Schwan" (which consists of only one syllable) "Schw".
-        The first syllable in "Uhu" is "U", its onset is "".
+        * The first syllable in "Banane" is "Ba", its onset is "B". The index is
+          set to "a".
+        * The onset of "Schwan" (which consists of only one syllable) is "Schw".
+          The index is set to "a".
+        * The first syllable in "Uhu" is "U", its onset is "". The index is set
+          to "U".
 
         """
         for i, sound in enumerate(self.sounds):
@@ -208,7 +205,7 @@ class SoundSequence:
         self.index = len(self)
 
     def count_syllables(self) -> int:
-        """Return the number of syllables of the sound sequence."""
+        """Return the number of syllables in the sound sequence."""
         last_sound = self.sounds[-1]
         return last_sound.syllable
 
@@ -218,9 +215,8 @@ class SoundSequence:
         return last_sound.phone == "@"
 
     def merge(self, other: "SoundSequence") -> Optional[str]:
-        """Merge another lemma into this one to form a compound."""
-        # The base word must have more than one syllable not counting an unstressed
-        # end syllable.
+        """Merge another sound sequence into this one to form a compound."""
+        # The base word must have more than one syllable.
         if self.count_syllables() < 2:
             return None
 

@@ -6,22 +6,21 @@ from banone.sound import SoundSequence
 
 class TestSound:
     @pytest.mark.parametrize(
-        ("sound", "is_vowel", "is_full_vowel"),
+        ("sound", "is_full_vowel"),
         [
-            ("a", True, True),
-            ("a:", True, True),
-            ("U", True, True),
-            ("aU", True, True),
-            ("@", True, False),
-            ("6", True, False),
-            ("b", False, False),
-            ("g", False, False),
+            ("a", True),
+            ("a:", True),
+            ("U", True),
+            ("aU", True),
+            ("@", False),
+            ("6", False),
+            ("b", False),
+            ("g", False),
         ],
     )
-    def test_check_vowels(self, sound, is_vowel, is_full_vowel):
+    def test_is_full_vowel(self, sound, is_full_vowel):
         sound = Sound(sound, 0, 1, False)
 
-        assert sound.is_vowel() == is_vowel
         assert sound.is_full_vowel() == is_full_vowel
 
 

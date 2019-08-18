@@ -1,7 +1,6 @@
 import pytest
 
 from banone.lemma import Lemma
-from banone.lemma import VerbStemError
 from tests.utils import load_test_data
 
 
@@ -9,7 +8,6 @@ class TestLemma:
     @pytest.mark.parametrize(
         ("orth", "lemma_dict"),
         [
-            (None, None),
             ("", {}),
             ("Test", None),
             ("Ananas", {"pos": "NN", "determiner": "eine", "color": "gelb"}),
@@ -35,15 +33,11 @@ class TestLemma:
         ],
     )
     def test_create(self, orth, lemma_dict):
-        lemma = Lemma()
-
-        if orth is not None:
-            lemma = Lemma(orth)
+        lemma = Lemma(orth)
 
         if lemma_dict is not None:
             lemma = Lemma(orth, lemma_dict)
 
-        orth = orth or ""
         lemma_dict = lemma_dict or {}
 
         assert lemma.orth == orth
@@ -72,24 +66,20 @@ class TestLemma:
 
         assert lemma.get_stem() == (phon_stem, orth_stem)
 
-    @pytest.mark.parametrize(("orth", "lemma_dict"), [("keinverb", {"pos": "VB"})])
-    def test_get_verb_stem_with_error(self, orth, lemma_dict):
-        lemma = Lemma(orth, lemma_dict)
-
-        with pytest.raises(VerbStemError):
-            lemma.get_stem()
-
     @pytest.mark.parametrize(
-        ("str1", "str2", "compound"), load_test_data(["base", "extra", "compound"])
+        ("base_str", "extra_str", "compound_str"),
+        load_test_data(["base", "extra", "compound"]),
     )
-    def test_merge(self, str1, str2, compound, fxt_dict):
-        base = fxt_dict.lookup(str1)
-        extra = fxt_dict.lookup(str2)
+    def test_merge(self, base_str, extra_str, compound_str, fxt_dict):
+        base = fxt_dict.lookup(base_str)
+        extra = fxt_dict.lookup(extra_str)
+        compound = Lemma(compound_str)
 
-        assert base.merge(extra) == compound
+        exp = base.merge(extra)
+        assert exp.orth == compound.orth
 
     @pytest.mark.parametrize(
-        ("str1", "str2"),
+        ("base_str", "extra_str"),
         [
             # The base word needs a minimum number of syllables to enable matching
             # of sounds with a distance > 1 (e.g. n/m).
@@ -106,8 +96,8 @@ class TestLemma:
             ("Tannzapfen", "Fahne"),
         ],
     )
-    def test_merge_fail(self, str1, str2, fxt_dict):
-        base = fxt_dict.lookup(str1)
-        extra = fxt_dict.lookup(str2)
+    def test_merge_fail(self, base_str, extra_str, fxt_dict):
+        base = fxt_dict.lookup(base_str)
+        extra = fxt_dict.lookup(extra_str)
 
         assert base.merge(extra) is None
