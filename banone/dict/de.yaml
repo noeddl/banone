@@ -1,0 +1,301 @@
+Ananas:
+    phon: "'a-na-nas"
+    pos: NN
+    determiner: eine
+    color: gelb
+
+Apfelsine:
+    phon: "a-pf@l-'zi:-n@"
+    pos: NN
+    determiner: eine
+    color: orange
+    property: rund
+
+Banane:
+    phon: "ba-'na:-n@"
+    pos: NN
+    determiner: eine
+    color: gelb
+    property: krumm
+
+Blaubeere:
+    phon: "'blaU-be:-R@"
+    pos: NN
+    determiner: eine
+    color: blau
+
+Brombeere:
+    phon: "'bROm-be:-R@"
+    pos: NN
+    determiner: eine
+    color: violett
+
+Elefant:
+    phon: "'e:-l@-fant"
+    pos: NN
+    determiner: ein
+    color: grau
+    property: groß
+
+Erdbeere:
+    phon: "'e:6t-be:-R@"
+    pos: NN
+    determiner: eine
+    color: rot
+    property: fruchtig
+
+Fahne:
+    phon: "'fa:-n@"
+    pos: NN
+    determiner: eine
+    action: flattert im Wind
+
+Flucht:
+    phon: "'flUxt"
+    pos: NN
+    determiner: eine
+    action: läuft schnell davon
+
+Fruchtsalat:
+    phon: "'fRUxt-za-la:t"
+    pos: NN
+    determiner: ein
+    color: bunt
+
+Himbeere:
+    phon: "'hIm-be:-R@"
+    pos: NN
+    determiner: eine
+    color: rot
+    property: fruchtig
+
+Kamin:
+    phon: "ka-'mi:n"
+    pos: NN
+    determiner: ein
+    action: qualmt
+
+Kaninchen:
+    phon: "ka-'ni:n-C@n"
+    pos: NN
+    determiner: ein
+    property: niedlich
+    action: hoppelt über die Wiese
+
+Kastanie:
+    phon: "kas-'ta:-ni-@"
+    pos: NN
+    determiner: eine
+    color: braun
+
+Klo:
+    phon: "'klo:"
+    pos: NN
+    determiner: ein
+    action: sitzt auf dem WC
+
+Knast:
+    phon: "'knast"
+    pos: NN
+    determiner: ein
+    action: sitzt hinter Gittern
+
+Krokodil:
+    phon: "kRo-ko-'di:l"
+    pos: NN
+    determiner: ein
+    property: gefährlich
+    action: schwimmt im Wasser
+
+Laubfrosch:
+    phon: "'laUp-fROS"
+    pos: NN
+    determiner: ein
+    action: hüpft durch den Wald
+
+Lärm:
+    phon: "'lE6m"
+    pos: NN
+    determiner: ein
+    property: laut
+
+Lötkolben:
+    phon: "'l2:t-kOl-b@n"
+    pos: NN
+    determiner: ein
+    property: heiß
+    action: verschweißt Dinge
+
+Mandarine:
+    phon: "man-da-'Ri:-n@"
+    pos: NN
+    determiner: eine
+    color: orange
+    property: rund
+
+Maulwurf:
+    phon: "'maUl-vU6f"
+    pos: NN
+    determiner: ein
+    color: schwarz
+    property: blind
+
+Nudelauflauf:
+    phon: "'nu:-d@l-aUf-laUf"
+    pos: NN
+    determiner: ein
+    property: mit Käse überbacken
+
+Pinguin:
+    phon: "'pIN-gU-i:n"
+    pos: NN
+    determiner: ein
+    color: schwarz-weiß
+
+Pudel:
+    phon: "'pu:-d@l"
+    pos: NN
+    determiner: ein
+    action: bellt
+
+Randale:
+    phon: "Ran-'da:-l@"
+    pos: NN
+    determiner: eine
+    action: macht ordentlich Krawall
+
+Raub:
+    phon: "'RaUp"
+    pos: NN
+    determiner: ein
+    action: trägt eine Maske
+
+Schmutz:
+    phon: "'SmUts"
+    pos: NN
+    determiner: ein
+    property: dreckig
+
+Schutzhelm:
+    phon: "'SUts-hElm"
+    pos: NN
+    determiner: ein
+    action: wird von Fahrradfahrern getragen
+
+Schwan:
+    phon: "'Sva:n"
+    pos: NN
+    determiner: ein
+    action: schwimmt auf dem See
+
+Tannzapfen:
+    phon: "'tan-tsa-pf@n"
+    pos: NN
+    determiner: ein
+    color: braun
+
+Tomate:
+    phon: "to-'ma:-t@"
+    pos: NN
+    determiner: eine
+    color: rot
+
+Uhu:
+    phon: "'u-hu"
+    pos: NN
+    determiner: ein
+    action: sitzt auf einem Baum
+
+Vandale:
+    phon: "van-'da:-l@"
+    pos: NN
+    determiner: ein
+    action: versteckt sich vor der Polizei
+
+Wert:
+    phon: "'ve:6t"
+    pos: NN
+    determiner: ein
+    property: sehr kostbar
+
+Wärmflasche:
+    phon: "'vE6m-fla-S@"
+    pos: NN
+    determiner: eine
+    action: sorgt dafür, dass man nicht friert
+
+Zebra:
+    phon: "'tse:-bRa"
+    pos: NN
+    determiner: ein
+    color: schwarz-weiß gestreift
+
+blöd:
+    phon: "'bl2:t"
+    pos: ADJ
+    property: dumm
+
+faul:
+    phon: "'faUl"
+    pos: ADJ
+    action: weigert sich zu arbeiten
+
+fromm:
+    phon: "'fROm"
+    pos: ADJ
+    action: sitzt in der Kirche ganz vorne
+
+huhu:
+    phon: "'hu-hu"
+    pos: INT
+    action: winkt
+
+kleben:
+    phon: "'kle:-b@n"
+    pos: VB
+    action: kommt nicht vom Fleck
+
+schlau:
+    phon: "'SlaU"
+    pos: ADJ
+    action: weiß sehr viel
+
+schlimm:
+    phon: "'SlIm"
+    pos: ADJ
+    action: macht nur Ärger
+
+schoko:
+    phon: "'So:-ko"
+    pos: PRE
+    color: braun
+
+schweben:
+    phon: "'Sve:-b@n"
+    pos: VB
+    action: berührt nicht den Boden
+
+schwingen:
+    phon: "'SvI-N@n"
+    pos: VB
+    action: sitzt auf der Schaukel
+
+spannen:
+    phon: "'Spa-n@n"
+    pos: VB
+    action: schaut durchs Schlüsselloch
+
+springen:
+    phon: "'SpRI-N@n"
+    pos: VB
+    action: hüpft herum
+
+tele:
+    phon: "'te:-l@"
+    pos: PRE
+    action: kann telefonieren
+
+zappeln:
+    phon: "'tsa-p@ln"
+    pos: VB
+    action: kann keine Minute ruhig sitzen
