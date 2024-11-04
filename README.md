@@ -100,7 +100,7 @@ B[an|a|ne]
 
 ## Requirements
 
-1. Python 3.6+
+1. Python 3.9+
 2. [Poetry](https://github.com/sdispater/poetry) for dependency management and packaging. Install with `pip install poetry`.
 
 ## Build and run
