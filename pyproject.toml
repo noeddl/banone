@@ -1,21 +1,21 @@
 [tool.poetry]
 name = "banone"
-version = "0.1.0"
+version = "0.1.1"
 description = "A generator for joke riddles that combine two words into a pun"
 authors = ["Anett Seeker"]
 
 [tool.poetry.dependencies]
-python = "^3.6"
-pyyaml = "^5.1"
+python = "^3.9"
+pyyaml = "^6.0"
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^1.17"
-pytest = "^5.0"
-mypy = "^0.720.0"
+pre-commit = "^4.0"
+pytest = "^8.0"
+mypy = "^1.0"
 
 [tool.poetry.scripts]
 banone-run = "banone.main:main"
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.masonry.api"
